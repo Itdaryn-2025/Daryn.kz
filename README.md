@@ -7,9 +7,9 @@
 * Нет сборок, CI/CD, это «свободные файлы».
 
 ## Конфиденциальность и права на репозиторий
-* © 2025 РГКП "НПЦ Дарын". Все права защищены.  
+* © 2025 РГКП "РНПЦ Дарын". Все права защищены.  
 Этот код — закрыт. Разрешено только внутреннее использование. Редактирование, копирование,
 публикация или коммерческое использование строго запрещено без письменного разрешения.
 
-* © 2025 RSSE "RSPC Daryn". All rights reserved.
+* © 2025 RSE "RSPC Daryn". All rights reserved.
 This code is proprietary, for internal use only. Distribution, modification, or commercial use by any third parties is prohibited without explicit permission.
