@@ -9,7 +9,6 @@
  * @since Twenty Sixteen 1.0
  */
 ?>
-
 <!-- мой вариант хедер -->
 <!-- <div class="header">
     <div class="header-logo">
@@ -39,7 +38,6 @@
     <div class="header-menu-wrap">
       <div class="header-menu">
         <div class="h-region-set-wrap">
-
           <div class="h-region-set">
             <?php if (pll_current_language() == "ru") {
     $regionNetwork = "Региональная сеть";
@@ -68,7 +66,6 @@
     $entryGrade = "С какого класса ведется прием в школу";
     $lang_suffix = "_kz";
 }
-
 global $wpdb;
 $centers = $wpdb->get_results("SELECT name{$lang_suffix} as name, link, director, director_phone, director_email, deputy, deputy_phone, deputy_email, adress{$lang_suffix} as adress, adress_phone, adress_email FROM network_centers where visible = 1");
 ?>
@@ -272,9 +269,7 @@ wp_nav_menu(
 <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-665"><a href="https://daryn.kz/en/schedule-of-events/">For teachers</a></li>
 <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-672"><a href="https://daryn.kz/plan-raboty/">Work Plan on Rus</a>
 <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-672"><a href="https://daryn.kz/en/contacts/">Contacts</a>
-
 </li>
-
 ';
                         }
                         ?>
@@ -295,16 +290,13 @@ wp_nav_menu(
             <div class="col6 disp_block_mob" style="    margin: 20px 0;    font-size: 10px;">
                 © 2025 Республиканский научно-практический центр "Дарын"
             </div>
-
         </div>
-
     </div>
     <a id="button"><i class="fas fa-angle-up"></i></a>
 </footer>
 </div>
 </div>
 <?php wp_footer(); ?>
-
 <script src="/wp-content/themes/twentysixteen/js/script.js"></script>
 <script src="/wp-content/themes/twentysixteen/js/new_scripts2020.js"></script>
 <script src="/wp-content/themes/twentysixteen/js/archive_olimp.js"></script>
@@ -348,8 +340,6 @@ wp_nav_menu(
         accurateTrackBounce: true
     });
 </script>
-
-
 <noscript>
     <div><img src="https://mc.yandex.ru/watch/67537822" style="position:absolute; left:-9999px;" alt=""/></div>
 </noscript>
