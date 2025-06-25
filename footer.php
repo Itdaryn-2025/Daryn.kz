@@ -1,14 +1,29 @@
 <?php
+echo '<style>
+  #colophon.site-footer {
+    background: #fff;
+    padding: 20px 0;
+    border-top: 1px solid #ccc;
+    margin-top: -10px;
+  }
+  #colophon .site-info {
+    margin-top: -10px;
+  }
+  #colophon .social_icon img,
+  #colophon .primary-menu li {
+    margin-bottom: 0;
+  }
+</style>';
+
 /**
  * The template for displaying the footer
- *
  * Contains the closing of the #content div and all content after
- *
  * @package WordPress
  * @subpackage Twenty_Sixteen
  * @since Twenty Sixteen 1.0
  */
 ?>
+
 <!-- мой вариант хедер -->
 <!-- <div class="header">
     <div class="header-logo">
@@ -38,6 +53,7 @@
     <div class="header-menu-wrap">
       <div class="header-menu">
         <div class="h-region-set-wrap">
+
           <div class="h-region-set">
             <?php if (pll_current_language() == "ru") {
     $regionNetwork = "Региональная сеть";
@@ -66,6 +82,7 @@
     $entryGrade = "С какого класса ведется прием в школу";
     $lang_suffix = "_kz";
 }
+
 global $wpdb;
 $centers = $wpdb->get_results("SELECT name{$lang_suffix} as name, link, director, director_phone, director_email, deputy, deputy_phone, deputy_email, adress{$lang_suffix} as adress, adress_phone, adress_email FROM network_centers where visible = 1");
 ?>
@@ -183,120 +200,121 @@ wp_nav_menu(
   </div> -->
 
 </div>
-<footer id="colophon" class="site-footer" role="contentinfo">
+<!-- 205-315 -->
 
-    <?php if (has_nav_menu('social')) : ?>
-        <nav class="social-navigation" role="navigation"
-             aria-label="<?php esc_attr_e('Footer Social Links Menu', 'twentysixteen'); ?>">
-            <?php
-            wp_nav_menu(
-                array(
-                    'theme_location' => 'social',
-                    'menu_class' => 'social-links-menu',
-                    'depth' => 1,
-                    'link_before' => '<span class="screen-reader-text">',
-                    'link_after' => '</span>',
-                )
-            );
-            ?>
-        </nav>
-    <?php endif; ?>
 
-    <div class="site-info" style="font-size:0.8em">
-        <?php
-        /**
-         * Fires before the twentysixteen footer text for footer customization.
-         *
-         * @since Twenty Sixteen 1.0
-         */
-        do_action('twentysixteen_credits');
-        ?>
 
-        <div class="row foot_new">
-            <div class="col6 disp_none_mob">
-                <?php
-                if (pll_current_language() == 'kk') {
-                    echo '© 2025 “Дарын” Республикалық Ғылыми-Практикалық Орталығы';
-                } else if (pll_current_language() == 'ru') {
-                    echo '© 2025 Республиканский Научно-Практический Центр "Дарын"';
-                } else if (pll_current_language() == 'en') {
-                    echo '© 2025 Republican Scientific and Practical Center "Daryn""';
-                }
-                ?>
-            </div>
-            <div class="col6 foot_menu">
-                <div class="menu-%d1%80%d1%83%d1%81%d1%81%d0%ba%d0%be%d0%b5-%d0%bc%d0%b5%d0%bd%d1%8e-container">
-                    <ul id="menu-%d1%80%d1%83%d1%81%d1%81%d0%ba%d0%be%d0%b5-%d0%bc%d0%b5%d0%bd%d1%8e-2"
-                        class="primary-menu">
-                        <?php
-                        if (pll_current_language() == 'kk') {
-                            echo '
+        <div style="background-color: #252f54; color: white; padding: 30px 10px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-start; font-family: Arial, sans-serif; font-size: 14px;">
+            <!-- Левая колонка -->
+            <div style="flex: 1 1 0px; min-width: 280px; margin-left: 130px;">
+                <a href="#" style="display: inline-block; margin-bottom: 10px; margin-left: 0px">
+                    <div style="width: 140px; height: 60px; align-items-center;"><img src="https://daryn.kz/wp-content/uploads/2021/08/white-logo-daryn.png" alt=""></div>
+                </a>
+                <?php if (pll_current_language() == 'kk') : ?>
+                    <p style="line-height: 1.6;">«Дарын» республикалық ғылыми-практикалық орталығының миссиясы – Қазақстанның    дарынды балалары мен дарынды жастарын анықтау, дамыту және кәсіби қолдау болып табылады</p>
+                <?php elseif (pll_current_language() == 'ru') : ?>
+                    <p style="line-height: 1.6;">Миссией Республиканского научно-практического центра «Дарын» является выявление, развитие и профессиональная поддержка одаренных детей и талантливой молодежи Казахстана</p>
+                <?php else : ?>
+                    <p style="line-height: 1.6;">Our mission - identification, development and professional support of gifted children and talented youth in Kazakhstan</p>
+                <?php endif; ?>
 
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-415"><a href="http://daryn.kz/">Главная</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-239"><a href="http://daryn.kz/kk/%d0%be%d1%80%d1%82%d0%b0%d0%bb%d1%8b%d2%9b-%d1%82%d1%83%d1%80%d0%b0%d0%bb%d1%8b/">Біз туралы</a>
-
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-666"><a href="https://daryn.kz/kk/pravila-i-polozhenie-meropriyatii-kz/">Оқушыларға</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-665"><a href="https://daryn.kz/kk/%d0%bc%d2%b1%d2%93%d0%b0%d0%bb%d1%96%d0%bc%d0%b4%d0%b5%d1%80%d0%b3%d0%b5-%d0%b0%d1%80%d0%bd%d0%b0%d0%bb%d2%93%d0%b0%d0%bd-%d0%be%d0%bb%d0%b8%d0%bc%d0%bf%d0%b8%d0%b0%d0%b4%d0%b0%d0%bb%d0%b0%d1%80/">Мұғалімдерге</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-672"><a href="https://daryn.kz/kk/plan-raboty-kz/">Жұмыс жоспары</a>
-<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-672"><a href="https://daryn.kz/kk/%d0%b1%d0%b0%d0%b9%d0%bb%d0%b0%d0%bd%d1%8b%d1%81%d1%82%d0%b0%d1%80/">Байланыстар</a>
-</li>
-
-';
-                        } else if (pll_current_language() == 'ru') {
-                            echo '
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-415"><a href="http://daryn.kz/">Главная</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-239"><a href="http://daryn.kz/%d0%be-%d1%86%d0%b5%d0%bd%d1%82%d1%80%d0%b5/">О нас</a>
-
-</li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-666"><a href="https://daryn.kz/pravila-i-polozhenie-meropriyatii/">Школьникам</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-665"><a href="https://daryn.kz/%d0%bf%d1%80%d0%b0%d0%b2%d0%b8%d0%bb%d0%b0-%d0%b8-%d0%bf%d0%be%d0%bb%d0%be%d0%b6%d0%b5%d0%bd%d0%b8%d1%8f-%d0%be%d0%bb%d0%b8%d0%bc%d0%bf%d0%b8%d0%b0%d0%b4-%d0%b8-%d0%ba%d0%be%d0%bd%d0%ba%d1%83%d1%80/">Учителям</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-672"><a href="https://daryn.kz/plan-raboty/">План работы</a>
-<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-672"><a href="https://daryn.kz/%d0%ba%d0%be%d0%bd%d1%82%d0%b0%d0%ba%d1%82%d1%8b-2/">Контакты</a>
-
-</li>
-
-';
-                        } else if (pll_current_language() == 'en') {
-                            echo '
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-415"><a href="https://daryn.kz/en/">Main page</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-239"><a href="https://daryn.kz/en/about-center/">About us</a>
-
-</li>
-
-<!-- Вкладки школьникам, учителям и план работы на английском пока не имеются, поэтому я указал календарь мероприятий-->
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-666"><a href="https://daryn.kz/en/schedule-of-events/">For students</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-665"><a href="https://daryn.kz/en/schedule-of-events/">For teachers</a></li>
-<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-672"><a href="https://daryn.kz/plan-raboty/">Work Plan on Rus</a>
-<li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-672"><a href="https://daryn.kz/en/contacts/">Contacts</a>
-</li>
-';
-                        }
-                        ?>
-                    </ul>
+                <div style="margin-top: 25px; display: flex; justify-content: space-around;">
+                    <a href="https://www.facebook.com/RSPCDaryn" target="_blank" style="margin-right: 10px;">
+                        <img src="/wp-content/uploads/2021/08/facebook-2025.png" alt="Facebook" style="width: 40px;">
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCmkD3mBsTNA6dp0puOLeqBA" target="_blank" style="margin-right: 10px;">
+                        <img src="/wp-content/uploads/2021/08/youtube-2025.png" alt="YouTube" style="width: 40px;">
+                    </a>
+                    <a href="https://instagram.com/rspc_daryn" target="_blank" style="margin-right: 10px;">
+                        <img src="/wp-content/uploads/2021/08/instagram-2025.png" alt="Instagram" style="width: 40px;">
+                    </a>
+                    <a href="https://t.me/daryn_centre" target="_blank">
+                        <img src="/wp-content/uploads/2021/08/telegram-2025.png" alt="Telegram" style="width: 40px;">
+                    </a>
+                    <a href="https://www.linkedin.com/company/republican-scientific-and-practical-center-daryn/" target="_blank">
+                        <img src="wp-content/uploads/2021/08/linkedin-2025.png" alt="LinkedIn" style="width: 40px;">
+                    </a>
+                    <a href="https://kk.wikipedia.org/wiki/%D0%94%D0%B0%D1%80%D1%8B%D0%BD_%D1%80%D0%B5%D1%81%D0%BF%D1%83%D0%B1%D0%BB%D0%B8%D0%BA%D0%B0%D0%BB%D1%8B%D2%9B_%D2%93%D1%8B%D0%BB%D1%8B%D0%BC%D0%B8-%D0%BF%D1%80%D0%B0%D0%BA%D1%82%D0%B8%D0%BA%D0%B0%D0%BB%D1%8B%D2%9B_%D0%BE%D1%80%D1%82%D0%B0%D0%BB%D1%8B%D2%93%D1%8B" target="_blank">
+                        <img src="/wp-content/uploads/2021/08/wikipedia-2025.png" alt="Wikipedia" style="width: 40px;">
+                    </a>
                 </div>
             </div>
 
-            <div class="col12">
-                <div class="social_icon">
-                    <a href="https://www.facebook.com/RSPCDaryn"><img src="/wp-content/uploads/2020/07/fac_g.png"/></a>
-                    <a href="https://www.youtube.com/channel/UCmkD3mBsTNA6dp0puOLeqBA" style="padding-top:8px"><img
-                                src="/wp-content/uploads/2020/07/you_g.png"/></a>
-                    <a href="https://instagram.com/rspc_daryn" style="padding-top:5px"><img
-                                src="/wp-content/uploads/2020/07/inst_g.png"/></a>
-                    <a href="https://t.me/daryn_centre"><img src="/wp-content/uploads/2020/09/telegram_g.png"/></a>
-                </div>
+
+            <!-- Центральная колонка -->
+            <div style="min-width: 280px; margin-top: 70px; margin-left: 150px">
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <?php
+                    if (pll_current_language() == 'kk') {
+                        echo '
+            <li style="margin-bottom: 8px;"><a href="http://daryn.kz/" style="color: white; text-decoration: underline;">Басты бет</a></li>
+            <li style="margin-bottom: 8px;"><a href="https://daryn.kz/kk/%d0%be%d1%80%d1%82%d0%b0%d0%bb%d1%8b%d2%9b-%d1%82%d1%83%d1%80%d0%b0%d0%bb%d1%8b/" style="color: white; text-decoration: underline;">Біз туралы</a></li>
+            <li style="margin-bottom: 8px;"><a href="https://daryn.kz/kk/pravila-i-polozhenie-meropriyatii-kz/" style="color: white; text-decoration: underline;">Оқушыларға</a></li>
+            <li style="margin-bottom: 8px;"><a href="https://daryn.kz/kk/мұғалімдерге-арналған-олимпиадалар/" style="color: white; text-decoration: underline;">Мұғалімдерге</a></li>
+            <li style="margin-bottom: 8px;"><a href="https://daryn.kz/kk/plan-raboty-kz/" style="color: white; text-decoration: underline;">Жұмыс жоспары</a></li>
+          ';
+                    } else if (pll_current_language() == 'ru') {
+                        echo '
+            <li style="margin-bottom: 8px;"><a href="http://daryn.kz/" style="color: white; text-decoration: underline;">Главная</a></li>
+            <li style="margin-bottom: 8px;"><a href="http://daryn.kz/о-центре/" style="color: white; text-decoration: underline;">О нас</a></li>
+            <li style="margin-bottom: 8px;"><a href="https://daryn.kz/pravila-i-polozhenie-meropriyatii/" style="color: white; text-decoration: underline;">Школьникам</a></li>
+            <li style="margin-bottom: 8px;"><a href="https://daryn.kz/правила-и-положения-олимпиад-и-конкур/" style="color: white; text-decoration: underline;">Учителям</a></li>
+            <li style="margin-bottom: 8px;"><a href="https://daryn.kz/plan-raboty/" style="color: white; text-decoration: underline;">План работы</a></li>
+          ';
+                    } else {
+                        echo '
+            <li style="margin-bottom: 8px;"><a href="https://daryn.kz/en/" style="color: white; text-decoration: none;">Main page</a></li>
+            <li style="margin-bottom: 8px;"><a href="https://daryn.kz/en/about-center/" style="color: white; text-decoration: underline;">About us</a></li>
+            <li style="margin-bottom: 8px;"><a href="https://daryn.kz/en/schedule-of-events/" style="color: white; text-decoration: underline;">For students</a></li>
+            <li style="margin-bottom: 8px;"><a href="https://daryn.kz/en/schedule-of-events/" style="color: white; text-decoration: underline;">For teachers</a></li>
+            <li style="margin-bottom: 8px;"><a href="https://daryn.kz/plan-raboty/" style="color: white; text-decoration: underline;">Work plan</a></li>
+            <!-- <li style="margin-bottom: 8px;"><a href="https://daryn.kz/en/contacts/" style="color: white; text-decoration: none;">Contacts</a></li>
+          -->
+          ';
+                    }
+                    ?>
+                </ul>
             </div>
-            <div class="col6 disp_block_mob" style="    margin: 20px 0;    font-size: 10px;">
-                © 2025 Республиканский научно-практический центр "Дарын"
+
+
+            <!-- Правая колонка, где контакты -->
+            <div style="min-width: 0px; margin-top: 70px; margin-left: 30px; margin-right: 150px">
+                <ul style="list-style: none; padding: 0; margin: 0;">
+                    <?php
+                    if (pll_current_language() == 'kk') {
+                        echo '
+            <li style="margin-bottom: 8px;"><a href="" style="color: white; text-decoration: none;">Сұрақтарыңыз болса:</a></li>
+            <li style="margin-bottom: 8px;"><a href="https://2gis.kz/astana/firm/70000001019219385?m=71.439256%2C51.127615%2F17&utm_source=details&utm_medium=widget&utm_campaign=firmsonmap" style="color: white; text-decoration: underline;">📍Мекен-жайымыз</a></li>
+            <li style="margin-bottom: 8px;"><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#search/info%40daryn.kz?compose=new" style="color: white; text-decoration: underline;">E-mail: info@daryn.kz</a></li>
+            <li style="margin-bottom: 8px;"><a href="" style="color: white; text-decoration: none;">Телефон: +7 7172 57 65 56</a></li>
+          ';
+                    } else if (pll_current_language() == 'ru') {
+                        echo '
+            <li style="margin-bottom: 8px;"><a href="" style="color: white; text-decoration: none;">Если имеются вопросы:</a></li>
+            <li style="margin-bottom: 8px;"><a href="https://2gis.kz/astana/firm/70000001019219385?m=71.439256%2C51.127615%2F17&utm_source=details&utm_medium=widget&utm_campaign=firmsonmap" style="color: white; text-decoration: underline;">📍Наше местоположение</a></li>
+            <li style="margin-bottom: 8px;"><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#search/info%40daryn.kz?compose=new" style="color: white; text-decoration: underline;">E-mail: info@daryn.kz</a></li>
+            <li style="margin-bottom: 8px;"><a href="" style="color: white; text-decoration: none;">Телефон: +7 7172 57 65 56</a></li>
+          ';
+                    } else {
+                        echo '
+            <li style="margin-bottom: 8px;"><a href="" style="color: white; text-decoration: none;">If you have questions:</a></li>
+            <li style="margin-bottom: 8px;"><a href="https://2gis.kz/astana/firm/70000001019219385?m=71.439256%2C51.127615%2F17&utm_source=details&utm_medium=widget&utm_campaign=firmsonmap" style="color: white; text-decoration: underline;">📍Our location</a></li>
+            <li style="margin-bottom: 8px;"><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#search/info%40daryn.kz?compose=new" style="color: white; text-decoration: underline;">E-mail: info@daryn.kz</a></li>
+            <li style="margin-bottom: 8px;"><a href="" style="color: white; text-decoration: none;">Телефон: +7 7172 57 65 56</a></li>
+          ';
+                    }
+                    ?>
+                </ul>
             </div>
         </div>
+
     </div>
     <a id="button"><i class="fas fa-angle-up"></i></a>
 </footer>
 </div>
 </div>
 <?php wp_footer(); ?>
+
 <script src="/wp-content/themes/twentysixteen/js/script.js"></script>
 <script src="/wp-content/themes/twentysixteen/js/new_scripts2020.js"></script>
 <script src="/wp-content/themes/twentysixteen/js/archive_olimp.js"></script>
@@ -340,6 +358,8 @@ wp_nav_menu(
         accurateTrackBounce: true
     });
 </script>
+
+
 <noscript>
     <div><img src="https://mc.yandex.ru/watch/67537822" style="position:absolute; left:-9999px;" alt=""/></div>
 </noscript>
