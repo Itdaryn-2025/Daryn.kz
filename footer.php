@@ -59,6 +59,92 @@ echo '<style>
   }
 }
 
+@media (min-width: 769px) and (max-width: 1220px) {
+  div[style*="background-color: #252f54"] {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    flex-direction: row !important;
+    justify-content: space-around !important;
+    padding: 30px 20px !important;
+    gap: 20px !important;
+  }
+
+  /* Левая колонка */
+  div[style*="margin-left: 130px"] {
+    margin-left: 0 !important;
+    flex: 1 1 300px !important;
+    max-width: 33%;
+    min-width: 280px;
+  }
+
+  /* Центральная колонка */
+  div[style*="margin-left: 150px"] {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    flex: 1 1 200px !important;
+    max-width: 30%;
+    min-width: 240px;
+  }
+
+  /* Правая колонка */
+  div[style*="margin-right: 150px"] {
+    margin: 0 !important;
+    flex: 1 1 200px !important;
+    max-width: 30%;
+    min-width: 240px;
+  }
+
+  div[style*="margin-top: 25px; display: flex"] {
+    margin-top: 20px !important;
+    flex-wrap: wrap !important;
+    gap: 10px !important;
+    justify-content: flex-start !important;
+  }
+
+  div[style*="background-color: #252f54"] * {
+    font-size: 13.5px !important;
+    line-height: 1.4 !important;
+  }
+}
+@media (min-width: 800px) and (max-width: 840px) {
+  /* Общий футер */
+  div[style*="background-color: #252f54"] {
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: flex-start !important;
+    padding: 20px !important;
+    gap: 10px !important;
+  }
+
+  /* Центральная колонка */
+  div[style*="margin-left: 70px"] {
+    margin-left: 70px !important;
+    margin-right: 0px !important;
+    flex: 0 1 20% !important;
+    max-width: 20% !important;
+  }
+
+  }
+  /* Правая колонка */
+  div[style*="margin-left: 10px"][style*="margin-right: 100px"] {
+    margin: 0 !important;
+    flex: 0 1 25% !important;
+    max-width: 25% !important;
+  }
+
+  div[style*="margin-top: 25px; display: flex"] {
+    margin-top: 21px !important;
+    justify-content: flex-start !important;
+    flex-wrap: wrap !important;
+    gap: 11px !important;
+  }
+
+  div[style*="background-color: #252f54"] * {
+    font-size: 12.5px !important;
+    line-height: 1.5 !important;
+  }
+}
 </style>';
 
 /**
