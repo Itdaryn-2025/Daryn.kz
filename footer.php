@@ -49,7 +49,7 @@ echo '<style>
     margin-top: 30px !important;
     text-align: center;
   }
-  
+
   div[style*="margin-top: 25px; display: flex"] {
     justify-content: center !important;
     flex-wrap: wrap;
@@ -119,7 +119,7 @@ echo '<style>
 
   /* Центральная колонка */
   div[style*="margin-left: 70px"] {
-    margin-left: 70px !important; 
+    margin-left: 70px !important;
     margin-right: 0px !important;
     flex: 0 1 20% !important;
     max-width: 20% !important;
@@ -429,10 +429,10 @@ wp_nav_menu(
           ';
             } else {
                 echo '
-            <li style="margin-bottom: 8px;"><a href="" style="color: white; text-decoration: none;">If you have questions:</a></li>
+            <li style="margin-bottom: 8px;"><a href="" style="color: white; text-decoration: none;">If you have any questions:</a></li>
             <li style="margin-bottom: 8px;"><a href="https://2gis.kz/astana/firm/70000001019219385?m=71.439256%2C51.127615%2F17&utm_source=details&utm_medium=widget&utm_campaign=firmsonmap" style="color: white; text-decoration: underline;">📍Our location</a></li>
             <li style="margin-bottom: 8px;"><a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#search/info%40daryn.kz?compose=new" style="color: white; text-decoration: underline;">E-mail: info@daryn.kz</a></li>
-            <li style="margin-bottom: 8px;"><a href="" style="color: white; text-decoration: none;">Телефон: +7 7172 57 65 56</a></li>
+            <li style="margin-bottom: 8px;"><a href="" style="color: white; text-decoration: none;">Phone number: +7 7172 57 65 56</a></li>
           ';
             }
             ?>
