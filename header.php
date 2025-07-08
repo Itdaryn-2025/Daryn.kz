@@ -30,6 +30,64 @@ wp_head();
 
     <script src="/wp-content/themes/twentysixteen/js/jquery.min.js"></script>
     <script src="/wp-content/themes/twentysixteen/js/jquery.flipster.min.js"></script>
+
+    <style>
+    @media (min-width: 485px) and (max-width: 909px) {
+      .mob_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 8px 16px;
+      }
+      .mobile-logo img {
+        width: 48px !important;
+        height: auto;
+      }
+      .mobile-org-name p {
+        font-size: 1.15em;
+        font-weight: 600;
+        text-align: left;
+        margin: 0 0 0 12px;
+        line-height: 1.2;
+        letter-spacing: 0.01em;
+        white-space: normal;
+      }
+      .mobile-org-name {
+        flex: 1 1 auto;
+        margin-left: 8px;
+      }
+      .mobile-open-menu {
+        margin-left: 0;
+        margin-right: 0;
+        display: flex;
+        align-items: center;
+      }
+      .mobile-open-menu .fa-bars {
+        font-size: 2.2em !important;
+        padding: 8px;
+        cursor: pointer;
+      }
+    }
+
+    @media (max-width: 484px) {
+      .mobile-org-name p {
+        font-size: 1em;
+        font-weight: 500;
+        text-align: left;
+        margin: 0 0 0 8px;
+        line-height: 1.1;
+      }
+      .mobile-open-menu .fa-bars {
+        font-size: 1.5em !important;
+        padding: 4px;
+      }
+    }
+    @media (min-width: 768px) and (max-width: 1220px) {
+      .mobile_menu {
+        left: -9999px !important;
+      }
+    }
+    </style>
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
@@ -502,22 +560,20 @@ wp_head();
 
   </div>-->
     <script>
-        // Открытие/закрытие бургер-меню
-        (function(){
-            var openBtn = document.querySelector('.mobile-open-menu');
-            var closeBtn = document.querySelector('.new_btn_close');
-            var menu = document.querySelector('.mobile_menu');
-            if(openBtn && menu) {
-                openBtn.addEventListener('click', function(){
-                    menu.style.display = 'block';
-                    document.body.style.overflow = 'hidden';
-                });
-            }
-            if(closeBtn && menu) {
-                closeBtn.addEventListener('click', function(){
-                    menu.style.display = 'none';
+    document.addEventListener('DOMContentLoaded', function() {
+        var openBtn = document.querySelector('.mobile-open-menu');
+        var menu = document.querySelector('.mobile_menu');
+        if(openBtn && menu) {
+            openBtn.addEventListener('click', function(){
+                menu.style.left = '0';
+                document.body.style.overflow = 'hidden';
+            });
+            menu.addEventListener('click', function(e){
+                if(e.target.closest('.new_btn_close')) {
+                    menu.style.left = '-9999px';
                     document.body.style.overflow = '';
-                });
-            }
-        })();
+                }
+            });
+        }
+    });
     </script>\
